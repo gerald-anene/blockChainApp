@@ -1,0 +1,3 @@
+export const MINE_DATA="MINE_DATA";
+export const RESET_DATA="RESET_DATA";
+export const UPDATE_BLOCK_CHAIN="UPDATE_BLOCK_CHAIN";
