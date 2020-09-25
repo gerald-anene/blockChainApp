@@ -1,11 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .genesisBlock{
-	text-align: center;
-	justify-content: center;
-	line-height: 40px;
+	border:10px solid red;
+	text-align: justify;
+	padding: 5px,5px,5px,5px;
+	width:750px;
+	position:relative;
+	left: 100px;
+	bottom: 60px;
+	font-style: italic;
+	background-color: rgba(234,222,45,0.6);
 
 
 }
 
-.glable{
-	color: Brown;
+.mineblocks{
+    border:10px solid green;
+	text-align: justify;
+	padding: 10px,10px,10px,10px;
+	width: 750px;
+	position:relative;
+	left: 80px;
+	right: 150px;
+	bottom: 80px;
+	font-style: italic;
+	margin: 20px;
 }
+
+h2{
+	position: relative;
+	bottom: 55px;
+	text-decoration: underline;
+	font-size: 40px;
+	font-family: Lobster,monospace;
+
+}
+
+img{
+	height: 200px;
+	width: 300px;
+	position: relative;
+	bottom: 30px;
+	left: 500px;
+	right: 500px;
+	border-radius: 50%;
+
+}
+
+.thick-brown-border{
+	border:10px solid brown;
+}
+
+[type='checkbox']{
+	width: 20px;
+	height:20px;
+}
+
+
+.all-blocks{
+	border: 1px solid #ccc;
+	width: 875px;
+
+}
+
+.blocks{
+	font-size: 18px;
+}
+
+#mine-button{
+	position: relative;
+	left: 25px;
+}
+
+.chain-image{
+	position: relative;
+	left: 10px;
+}
+
+#other-blocks-heading{
+	position: relative;
+	bottom: 50px;
+}
+
+section{
+	position: relative;
+	bottom: 70px;
+}
+
+#search-section{
+	position: absolute;
+	bottom: 150px;
+	right: 250px;
+	top: 0px;
+}
+

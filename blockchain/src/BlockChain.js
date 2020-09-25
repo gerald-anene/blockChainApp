@@ -1,13 +1,14 @@
 import Block from './Block';
 import React,{ Component } from 'react';
 import './BlockChain.css';
+import   image   from './Blockchain.jpg';
 
 class BlockChain extends Component{
 
 	constructor(props){
 		super(props);
 		this.chain=[this.GenesisBlock()];
-		this.difficulty=5;
+		this.difficulty=2;
 	}
 
 	GenesisBlock(){
@@ -30,15 +31,13 @@ class BlockChain extends Component{
 		  	}else{
 
 		  		return(
-		  		<form  key={eachBlock.hash}>
-                  <div>
-                    <label>Data:<span>{eachBlock.data}</span></label><br/>
-                    <label>Previous Hash:<span>{eachBlock.previousHash}</span></label><br/>
-                    <label>Hash:<span>{eachBlock.hash}</span></label><br/>
-                    <label>Nonce:<span>{eachBlock.nonce}</span></label>
-                    <hr/>
+                  <div className='mineblocks'>
+                    <label>Data:<span className='blocks'>{eachBlock.data}</span></label><br/>
+                    <label>Previous Hash:<span className='blocks'>{eachBlock.previousHash}</span></label><br/>
+                    <label>Hash:<span className='blocks'>{eachBlock.hash}</span></label><br/>
+                    <label>Nonce:<span className='blocks'>{eachBlock.nonce}</span></label>
                   </div>
-                  </form>
+                
 		  		  )
 
 		  	}
@@ -49,23 +48,31 @@ class BlockChain extends Component{
 
 
 		return(
-             <div>
-	            <h1>Block Chain</h1>
+			<form key={1}>
+             <div className="all-blocks">
+	            <h1 style={{color:"blue"}}>Block Chain</h1>
+	            <img className='thick-brown-border chain-image' src={ image } alt="Block chain image" />
+	            <h2 className='genesis-header'>Genesis Block</h2>
 
 			      <div className="genesisBlock">
-				        <p>Genesis Block</p>
-				        <label>Data:<span > {this.chain[0].data}</span></label><br/>
-				        <label><span className="glable">Previous Hash</span>:<span > {this.chain[0].previousHash}</span></label><br/>
-				        <label>Hash:<span > {this.chain[0].hash}</span></label><br/>
-				        <label>Nonce:<span > {this.chain[0].nonce}</span></label>
-				        <hr/>
+				        <label>Data:<span className='blocks'> {this.chain[0].data}</span></label><br/>
+				        <label>Previous Hash:<span className='blocks' > {this.chain[0].previousHash}</span></label><br/>
+				        <label>Hash:<span className='blocks'> {this.chain[0].hash}</span></label><br/>
+				        <label>Nonce:<span className='blocks' > {this.chain[0].nonce}</span></label>
 			      </div>
-                   
-			      <h1>Other Blocks</h1>
-			      <label>Enter Data <input required  type="text" onChange={this.props.mineData} value={this.props.data} /></label><br/>
+                   <div>
+			      <h1 id='other-blocks-heading'>Other Blocks</h1>
 			       { result }
-			      <button onClick={()=>this.props.mineBlock(new Block(1,"12/06/1923",this.props.data))}>Mine Block</button>
+			      <section>
+			        <div id="search-section">
+				      <label>Enter Data <input id='text-field' required  type="text" onChange={this.props.mineData} value={this.props.data} /></label>
+				      <button onClick={()=>this.props.mineBlock(new Block(1,"12/06/1923",this.props.data))}>Mine Block</button>
+				     </div>
+			      </section>
+			      </div>
+			     
 		       </div>
+		       </form>
 			)
 	}
 
